@@ -1,5 +1,5 @@
-# Modulo 1
-Introducción SCSS, perfeccionamiento Flexbox e introducción al UX/UI
+# Modulo 1 - Introducción SCSS, perfeccionamiento Flexbox e introducción al UX/UI
+
 
 En este módulo vamos a seguir avanzando en los conocimientosde CSS, como poder seguir mejorando nuestro código, utilizaremos diferentes aplicaciones para trabajar distintas a los editores de texto como pueden ser Visual Studio o Sublime, utilizaremos editores que se encuentran en la web como Codepen.
 
