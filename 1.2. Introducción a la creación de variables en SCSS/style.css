@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ffffff;
+  height: 100vh;
+  height: 100vw;
+}
+
+
+.container {
+  font-family: Verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper {
+  padding: 21px;
+}
+.page-wrapper .featured {
+  color: DarkGreen;
+}
+.page-wrapper .page-content {
+  background-color: DarkGreen;
+  padding: 42px;
+  color: #ffffff;
+}
+.page-wrapper .page-content .container {
+  font-family: courier;
+}
