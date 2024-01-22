@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*Aquí creamos las variables*/
+/*Aquí definiremos los bloque de estilo reutilizables*/
+body {
+  background-color: #f6f6f6;
+  height: 100vh;
+  height: 100vw;
+}
+
+.container {
+  font-family: verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper {
+  padding: 21px;
+  /*Aqui utilizamos el selector para llamar a la clase "featured", y aplicamos el bloque de estilo definido en el @mixin, llamándolo mediante @include y el nombre del bloque de estilo creado*/
+}
+.page-wrapper .featured {
+  /*Eñ !default no funciona porque se ha intervenido la variable aplicandole un color concreto*/
+  color: DarkGreen;
+}
+.page-wrapper .page-content {
+  background-color: DarkGreen;
+  padding: 42px;
+  color: #f6f6f6;
+}

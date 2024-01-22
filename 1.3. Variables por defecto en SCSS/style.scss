@@ -1,0 +1,43 @@
+/*Aquí creamos las variables*/
+
+$off-white: #f6f6f6;
+$featured-color: DarkGreen;
+
+/*Aquí definiremos los bloque de estilo reutilizables*/
+
+@mixin heading-feature-styling {
+  $featured-color: DarkRed !default; /*Eñ !default no funciona porque se ha intervenido la variable aplicandole un color concreto*/
+  color: $featured-color;
+}
+
+@mixin section-feature-styling {
+  $featured-color: DarkRed !default;
+  background-color: $featured-color;
+  padding: 42px;
+  color: $off-white;
+}
+
+body {
+  background-color: $off-white;
+  height: 100vh;
+  height: 100vw;
+}
+
+.container {
+  font-family: verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper { 
+  padding: 21px;
+
+  /*Aqui utilizamos el selector para llamar a la clase "featured", y aplicamos el bloque de estilo definido en el @mixin, llamándolo mediante @include y el nombre del bloque de estilo creado*/
+  
+  .featured {
+    @include heading-feature-styling;
+  }
+
+  .page-content {
+    @include section-feature-styling;
+  }
+}
