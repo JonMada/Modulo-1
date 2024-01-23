@@ -1,0 +1,78 @@
+$off-white: #f6f6f6;
+$featured-color: DarkRed;
+
+/*Creamos la función llamada featured con @mixin. En ella aplicamos los estilos que nos
+interese implementar en la función*/
+
+@mixin featured {
+  color: Tomato;
+   .subheading a {
+     color: LightSteelBlue;
+     text-decoration: none;
+     &:hover {
+       color: LightSkyBlue;
+       text-decoration: underline;
+      }
+    }
+  }
+
+body {
+  background-color: $off-white;
+  height: 100vh;
+  height: 100vw;
+}
+
+.container {
+  font-family: Verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper { 
+  padding: 21px;
+  $featured-color: RoyalBlue;
+
+ 
+  /*De este modo llamos a la función featured creada con el mixin la cual                           contiene el blo que de estilo que queremos aplicar */
+  
+  .featured {
+    @include featured   
+      }
+    
+
+  .page-content {
+    background-color: $featured-color;
+    padding: 42px;
+    color: $off-white;
+
+    .container {
+      height: 60px !important;
+      font-family: courier;
+
+      .description {
+        float: left;
+        width: 75%;
+      }
+
+        /*PODEMOS BORRAR TODO ESTE CÓDIGO Y APLICAR EL ESTILO SIMPLEMENTE
+        LLAMANDO A LA FUNCIÓN
+          .subheading a {
+            color: LightSteelBlue;
+            text-decoration: none;
+            &:hover {
+              color: LightSkyBlue;
+              text-decoration: underline;
+            }
+          } */
+      
+        .sidebar {
+        font-family: Verdana;
+        text-align: right;
+        float: right;
+        width: 25%;
+        @include featured;
+      }
+    }
+  }
+}
+          
+      
