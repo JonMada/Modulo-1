@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*Creamos la función llamada featured con @mixin. En ella aplicamos los estilos que nos
-interese implementar en la función*/
+
 body {
   background-color: #f6f6f6;
   height: 100vh;
@@ -14,7 +13,7 @@ body {
 
 .page-wrapper {
   padding: 21px;
-  /*De este modo llamos a la función featured creada con el mixin la cual                           contiene el blo que de estilo que queremos aplicar */
+ 
 }
 .page-wrapper .featured {
   color: Tomato;
@@ -35,16 +34,6 @@ body {
 .page-wrapper .page-content .container {
   height: 60px !important;
   font-family: courier;
-  /*PODEMOS BORRAR TODO ESTE CÓDIGO Y APLICAR EL ESTILO SIMPLEMENTE
-  LLAMANDO A LA FUNCIÓN
-    .subheading a {
-      color: LightSteelBlue;
-      text-decoration: none;
-      &:hover {
-        color: LightSkyBlue;
-        text-decoration: underline;
-      }
-    } */
 }
 .page-wrapper .page-content .container .description {
   float: left;
