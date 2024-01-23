@@ -1,0 +1,63 @@
+$off-white: #f6f6f6;
+$featured-color: DarkRed;
+
+/*A la función @mixin le podemos añadir argumentos para que sea algo más dinámica de la siguiente forma. Añadiendo tras el nombre que le hayamos puesto a la función "()" y los valores que queramos meter. En este caso, a la función le hemos añadido una variable link-color, con la cual cada vez que llamemos a la función mediante @include + nombre podremos decirle de qué color queremos el link-color para ese caso. Se pueden añadir más variables como el color que queremos para el hover, etc. E incluso determinar el valor que queremos para esa variable, como por ejemplo $hover-color:yellow*/
+
+@mixin featured ($link-color, $hover-color:yellow) {
+  color: Tomato;
+   .subheading a {
+     color: $link-color;
+     text-decoration: none;
+     &:hover {
+       color: $hover-color;
+       text-decoration: underline;
+      }
+    }
+  }
+
+body {
+  background-color: $off-white;
+  height: 100vh;
+  height: 100vw;
+}
+
+.container {
+  font-family: Verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper { 
+  padding: 21px;
+  $featured-color: RoyalBlue;
+
+  
+  .featured {
+    @include featured (black)  
+      }
+    
+
+  .page-content {
+    background-color: $featured-color;
+    padding: 42px;
+    color: $off-white;
+
+    .container {
+      height: 60px !important;
+      font-family: courier;
+
+      .description {
+        float: left;
+        width: 75%;
+      }
+        .sidebar {
+        font-family: Verdana;
+        text-align: right;
+        float: right;
+        width: 25%;
+        @include featured (white);
+      }
+    }
+  }
+}
+          
+      
