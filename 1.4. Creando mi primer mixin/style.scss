@@ -32,7 +32,7 @@ body {
   $featured-color: RoyalBlue;
 
  
-  /*De este modo llamos a la función featured creada con el mixin la cual                           contiene el blo que de estilo que queremos aplicar */
+  /*De este modo llamos a la función featured creada con el mixin la cual contiene los valores de estilo que queremos aplicar */
   
   .featured {
     @include featured   
@@ -53,8 +53,8 @@ body {
         width: 75%;
       }
 
-        /*PODEMOS BORRAR TODO ESTE CÓDIGO Y APLICAR EL ESTILO SIMPLEMENTE
-        LLAMANDO A LA FUNCIÓN
+    /* TAMBIÉN NOS AYUDA A AHORRAR LA REPLICACIÓN DE CÓDIGO. PODEMOS BORRAR TODO ESTE CÓDIGO   Y APLICAR EL ESTILO SIMPLEMENTE
+    LLAMANDO A LA FUNCIÓN, ya que los valores son idénticos.
           .subheading a {
             color: LightSteelBlue;
             text-decoration: none;
