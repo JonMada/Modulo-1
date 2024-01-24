@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;*/
 
-    /*Lo de arriba se puede sintetizar en esto con el mixin*/
+    /*Lo de arriba se puede sintetizar en esto con el mixin como se ve a continuación*/
     @mixin flex-config ($flex:1, $justify-content:space-between )
       
     border: 1px solid grey;
@@ -32,6 +32,13 @@
     .content {
        @mixin flex-config
       .metadata {
+        
+        /*OTRO EJEMPLO: 
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        */
+        
         @mixin flex-config ($flex-direction: column, $justify-content: center)
         margin-left: 20px;
         .title {
