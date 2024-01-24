@@ -1,0 +1,61 @@
+@charset "UTF-8";
+body {
+  background-color: #f6f6f6;
+  height: 100vh;
+  height: 100vw;
+}
+
+.container {
+  font-family: Verdana;
+  font-size: 0.8rem;
+}
+
+.page-wrapper {
+  padding: 21px;
+}
+.page-wrapper .featured {
+  /*Aqui hemos creado un valor por defecto para el background color, "dark"*/
+  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
+  /*Si el bg-color es light, poner texto en tomato */
+  color: tomato;
+  /*Aquí hemos introducido un bg-color "light"*/
+}
+.page-wrapper .featured .subheading a {
+  color: black;
+  text-decoration: none;
+}
+.page-wrapper .featured .subheading a:hover {
+  color: black;
+  text-decoration: underline;
+}
+.page-wrapper .page-content {
+  background-color: RoyalBlue;
+  padding: 42px;
+  color: #f6f6f6;
+}
+.page-wrapper .page-content .container {
+  height: 60px !important;
+  font-family: courier;
+}
+.page-wrapper .page-content .container .description {
+  float: left;
+  width: 75%;
+}
+.page-wrapper .page-content .container .sidebar {
+  font-family: Verdana;
+  text-align: right;
+  float: right;
+  width: 25%;
+  /*Aqui hemos creado un valor por defecto para el background color, "dark"*/
+  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
+  /*En cualquier otro caso que no sea dark, ni light, poner texto en green*/
+  color: yellow;
+}
+.page-wrapper .page-content .container .sidebar .subheading a {
+  color: black;
+  text-decoration: none;
+}
+.page-wrapper .page-content .container .sidebar .subheading a:hover {
+  color: black;
+  text-decoration: underline;
+}
