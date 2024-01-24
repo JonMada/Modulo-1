@@ -1,7 +1,8 @@
 /*Los primero del todo creamos el mixin con los argumentos asociados a flex con el valor false por defecto. El display:flex se queda desplegado porque siempre nos va a hacer falta*/
 @mixin flex-config ($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
   display:flex
-    @if $justify-content != false {  /*Esto significa, si el justify-content no es false, pon el valor en justify content que se haya dado a la variable justify-content,es decir, ....@include flex-config ($justify-content:1)...*/
+    @if $justify-content != false {  /*Esto significa, si el justify-content no es false, pon el valor en justify content que se haya dado a la variable justify-content,es decir, 
+      ....@include flex-config ($justify-content:1)...*/
       justify-content: $justify-content 
         }
     @if $flex != false {
