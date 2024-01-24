@@ -14,11 +14,7 @@ body {
   padding: 21px;
 }
 .page-wrapper .featured {
-  /*Aqui hemos creado un valor por defecto para el background color, "dark"*/
-  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
-  /*Si el bg-color es light, poner texto en tomato */
   color: tomato;
-  /*Aquí hemos introducido un bg-color "light"*/
 }
 .page-wrapper .featured .subheading a {
   color: black;
@@ -46,9 +42,6 @@ body {
   text-align: right;
   float: right;
   width: 25%;
-  /*Aqui hemos creado un valor por defecto para el background color, "dark"*/
-  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
-  /*En cualquier otro caso que no sea dark, ni light, poner texto en green*/
   color: yellow;
 }
 .page-wrapper .page-content .container .sidebar .subheading a {
