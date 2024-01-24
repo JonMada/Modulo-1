@@ -1,0 +1,21 @@
+//Creamos una lista (variable string) con el nombre de los coches que queramos.
+
+$cars : "maserati","tesla","porsche";
+
+//@each Directive: se utiliza para iterar, de principio a fin, sobre listas y aplicar estilos a cada elemento. El primer $elemento que se ponga tras el @each, representa cada unidad que compone la lista que va a ser iterada. En nuestro caso, el primer valor de $car-name es "maserati" del string $cars.
+
+@each $car-name in $cars {
+  //String interpolation: esto nos va a permitir crear las clases de manera autómatica.     Crea la clase .car-"algo" de manera automática, a partir de la iteración, en la que       extrae ese "algo" de la lista indicada. En el primer caso, .car-# {$car-name}, extrae     maserati de la listas cars y los pega mediante la string interpolation "#", dando lugar   a la clase .car-maserati. Y así de manera repetida (iterada) hasta acabar con la lista.
+  .car-#{$car-name} {
+
+//Lo mismo estamos haciendo con las url, estamos diciéndole que busque el link en el  código html de manera automática, mediante una string interpolation en la parte de la url de interés. En este caso,    https://s3.amazonaws.com/bottegadevcamp/scss/cars/maserati.jpg viene antes del .jpg.
+    background-image: url("https://s3.amazonaws.com/bottega-devcamp/scss/cars/#{$car-name}.jpg");
+    background-repeat: no-repeat;
+    height:300px;
+    width: 500px;
+    object-fit: fill;
+    float:left
+    
+    
+  }
+}
