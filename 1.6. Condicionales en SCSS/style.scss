@@ -3,13 +3,14 @@ $featured-color: DarkRed;
 
 @mixin featured($bg-color: "dark") { /*Aqui hemos creado un valor por defecto para el background color, "dark"*/
  
-  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
+  /* Aqui lo que estamos diciendo es: si el bg-color es dark, quiero que el color del texto sea tomato. Cuando en los @include no introducimos ningún argumento @include nombre(....argumento...), 
+ se da por hecho que el valor por defecto del mismo es el establecido en el mixin, sin necesidad de especificarlo*/
   
   @if $bg-color == "light" { /*Si el bg-color es light, poner texto en tomato */
     color:tomato;
   } @else if $bg-color =="dark"{ /*Si el bg-color es dark, poner texto en azul.*/
     color:blue;
-  } @else {  /*En cualquier otro caso que no sea dark, ni light, poner texto en green*/
+  } @else {  /*En cualquier otro caso que no sea dark, ni light, poner texto en yellow*/
     color: yellow;
   }
 
@@ -61,7 +62,7 @@ body {
         text-align: right;
         float: right;
         width: 25%;
-        @include featured ("grey");
+        @include featured ("grey"); /*Aquí hemos introducido un bg-color que ni es "dark" ni "light"*/
       }
     }
   }
