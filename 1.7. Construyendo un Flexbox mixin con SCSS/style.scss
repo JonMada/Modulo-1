@@ -1,36 +1,36 @@
 /*Los primero del todo creamos el mixin con los argumentos asociados a flex con el valor false por defecto. El display:flex se queda desplegado porque siempre nos va a hacer falta*/
 @mixin flex-config ($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
-  display:flex
+  display:flex;
     @if $justify-content != false {  /*Esto significa, si el justify-content no es false, pon el valor en justify content que se haya dado a la variable justify-content,es decir, 
       ....@include flex-config ($justify-content:1)...*/
-      justify-content: $justify-content 
+      justify-content: $justify-content;
         }
     @if $flex != false {
-      flex: $flex 
+      flex: $flex; 
         }
      @if $flex-direction != false {
-      flex-direction : $flex-direction 
+      flex-direction : $flex-direction; 
         }
      @if $align-items != false {
-      align-items  : $align-items 
+      align-items  : $align-items; 
         }
 }
 
 .container {
-  @mixin flex-config;
+  @include flex-config;
   .item {
     /*flex: 1;
     display: flex;
     justify-content: space-between;*/
 
     /*Lo de arriba se puede sintetizar en esto con el mixin como se ve a continuación*/
-    @mixin flex-config ($flex:1, $justify-content:space-between )
+    @include flex-config ($flex:1, $justify-content:space-between )
       
     border: 1px solid grey;
     border-radius: 5px;
     margin-bottom: 10px;
     .content {
-       @mixin flex-config
+       @include flex-config
       .metadata {
         
         /*OTRO EJEMPLO: 
@@ -39,7 +39,7 @@
         justify-content:center;
         */
         
-        @mixin flex-config ($flex-direction: column, $justify-content: center)
+        @include flex-config ($flex-direction: column, $justify-content: center)
         margin-left: 20px;
         .title {
           margin: 0px;
@@ -47,10 +47,10 @@
       }
     }
     .btn-group {
-      @mixin flex-config ($align-items: center)
+      @include flex-config ($align-items: center)
       .button {
         height: 100%;
-        @mixin flex-config ($align-items: center, $flex-direction: row, $justify-content: center)
+        @include flex-config ($align-items: center, $flex-direction: row, $justify-content: center)
         width: 42px;
         font-size: 2em;
         a {
