@@ -1,0 +1,41 @@
+/*@mixin notification($background-color, $color, $border) {
+  width: 99%;
+  height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-family: Verdana;
+  border-radius: 3px;
+  margin: 10px;
+  background-color: $background-color;
+  color: $color;
+  border: $border;
+} */
+.error {
+  width: 99%;
+  height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-family: Verdana;
+  border-radius: 3px;
+  margin: 10px;
+  background-color: DarkRed;
+  color: white;
+  border: 1px solid LightSlateGray;
+  width: 800px;
+}
+
+.success {
+  width: 99%;
+  height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-family: Verdana;
+  border-radius: 3px;
+  margin: 10px;
+  background-color: MediumSeaGreen;
+  color: MintCream;
+  border: 1px solid LightSalmon;
+}
